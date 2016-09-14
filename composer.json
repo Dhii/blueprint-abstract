@@ -1,0 +1,34 @@
+{
+    "name": "dhii/blueprint-abstract",
+    "description": "An abstract implementation of the blueprint-builder design pattern.",
+    "authors": [
+        {
+            "name": "Dhii Team",
+            "email": "development@dhii.co"
+        }
+    ],
+    "require": {
+        "php": "^5.3.9",
+        "dhii\blueprint-interface": "dev-master"
+    },
+    "require-dev": {
+        "dhii/php-cs-fixer-config": "dev-php-5.3",
+        "phpunit/phpunit": "^4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dhii\\Blueprint\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dhii\\Blueprint\\UnitTest\\": "test/unit"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Dhii/blueprint-interface"
+        }
+    ]
+}
