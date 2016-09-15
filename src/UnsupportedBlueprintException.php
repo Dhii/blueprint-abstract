@@ -9,7 +9,6 @@ namespace Dhii\Blueprint;
  */
 class UnsupportedBlueprintException extends \Exception implements UnsupportedBlueprintExceptionInterface
 {
-
     /**
      * @var BlueprintInterface
      */
@@ -23,10 +22,10 @@ class UnsupportedBlueprintException extends \Exception implements UnsupportedBlu
     /**
      * {@inheritdoc}
      *
-     * @param BuilderInterface $builder [optional] The builder interface. Default: null
+     * @param BuilderInterface   $builder   [optional] The builder interface. Default: null
      * @param BlueprintInterface $blueprint [optional] The blueprint interface. Default: null
-    */
-    public function __construct($message = "", $code = 0, \Exception $previous = null, BuilderInterface $builder = null, BlueprintInterface $blueprint = null)
+     */
+    public function __construct($message = '', $code = 0, \Exception $previous = null, BuilderInterface $builder = null, BlueprintInterface $blueprint = null)
     {
         parent::__construct($message, $code, $previous);
         $this->setBuilder($builder)
@@ -53,11 +52,13 @@ class UnsupportedBlueprintException extends \Exception implements UnsupportedBlu
      * Sets the unsupported blueprint instance.
      *
      * @param BlueprintInterface $blueprint The blueprint instance.
+     *
      * @return UnsupportedBlueprintException This instance.
      */
     public function setBlueprint($blueprint)
     {
         $this->blueprint = $blueprint;
+
         return $this;
     }
 
@@ -65,12 +66,13 @@ class UnsupportedBlueprintException extends \Exception implements UnsupportedBlu
      * Sets the builder instance that threw this exception.
      *
      * @param BuilderInterface $builder The builder instance.
+     *
      * @return UnsupportedBlueprintException This instance.
      */
     public function setBuilder($builder)
     {
         $this->builder = $builder;
+
         return $this;
     }
-
 }
